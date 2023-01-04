@@ -1,0 +1,34 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Speak To Wa-Chan</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_io/favicon-32x32.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <noscript>
+You need to enable JavaScript to run this app.
+</noscript>
+  </head>
+  <body>
+<div class="root" style="background-image:url({% static 'assets/cutie.png' %})">
+<nav class="navbar">
+<p class="greet"></p>
+  <button class="logOut">Click To Logout</button>
+</nav>
+
+  <div class="messageShow">
+
+  </div>
+
+<footer class="messanger">
+<form class="sendTo">
+  <label for="mess">Enter your message</label>
+  <input name="mess" type="text" class="mess" id="mess" minlength="3" maxlength="100" required/>
+  <input type="submit" class="submitter"/>
+</form>
+</footer>
+</div>
+  <script type="application/javascript" src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

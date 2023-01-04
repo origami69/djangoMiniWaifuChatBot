@@ -1,0 +1,43 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Wa-Chan Login</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon_io/favicon-32x32.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <noscript>
+You need to enable JavaScript to run this app.
+</noscript>
+  </head>
+  <body>
+      <div class="Login">
+      <div class='signHolder'>
+    <div class='signIn'>
+    <h2 class='title'>Welcome Back Origami~~Chan <br/>Please Login Again</h2>
+      <form class='signIn' method="POST" action='login/'>
+        <label for='use'>Enter Username</label>
+          <input type='text' id='use' name='use' pattern="^[a-zA-Z0-9]*$"   minlength={3} maxlength={15} onchange={pass}  required/>
+          <label for='pas'>Enter Password</label>
+          <input type='password' name='pas' id='pas' pattern="^[a-zA-Z0-9]*$"   minlength={8} maxlength={15} onchange={check} required/>
+          <input type='submit'/>
+      </form>
+      <button class="switcherL">Click To Create Account</button>
+    </div>
+        <div class='createAccount'>
+    <h2 class='title'>Welcome Back Origami~~Chan <br/>Please Create Account</h2>
+      <form class='createAccount' method="POST" action='create/'>
+        <label for='user'>Enter Username</label>
+          <input type='text' id='user' name='user' pattern="^[a-zA-Z0-9]*$"   minlength={3} maxlength={15} onchange={pass()}  required/>
+          <label for='password'>Enter Password</label>
+          <input type='password' name='password' id='password' pattern="^[a-zA-Z0-9]*$"   minlength={8} maxlength={15} onchange={check()} required/>
+          <input type='submit'/>
+      </form>
+          <button class="switcherC">Click Login</button>
+    </div>
+    </div>
+
+</div>
+  <script type="application/javascript" src="{% static 'js/login.js' %}"></script>
+  </body>
+</html>
